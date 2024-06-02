@@ -1,0 +1,15 @@
+.toggle-btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.disp-card {
+  padding: 10px;
+  border: 1px solid silver;
+  width: 300px;
+}
+
+.dark {
+  background-color: rgb(61, 54, 54);
+  color: white;
+}
