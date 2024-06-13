@@ -10,11 +10,12 @@ import StateExample from "./03 State/StateExample";
 import StateProblem from "./03 State/StateProblem";
 import StateSolution from "./03 State/StateSolution";
 import UndefinedState from "./03 State/UndefinedState";
+import EffectDemo from "./04 Effect/EffectDemo";
 
 function App() {
   return (
     <>
-      <UndefinedState />
+      <EffectDemo />
     </>
   );
 }
