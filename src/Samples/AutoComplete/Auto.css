@@ -1,0 +1,102 @@
+.container {
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #3180a8; /* Adjust focus border color */
+  }
+  
+  .autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 110%;
+    margin-top: -1px;
+    background-color: #fff;
+    border: 0.5px solid #3180a8;
+    border-top: 1px solid #3180a8;
+    /* border-top: none; */
+    border-radius: 0 0 4px 4px;
+    list-style-position: inside;
+  padding-left: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .autocomplete-suggestion {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .autocomplete-suggestion:hover {
+    background-color: #f0f0f0;
+  }
+
+
+  .suggestion-pane {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #3180a8;
+}
+
+.suggestion-list {
+  list-style-type: none; /* Remove bullet dots */
+  padding: 0; /* Remove default padding */
+}
+
+.suggestion-item {
+  /* border: 1px solid #ccc; */
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.autocomplete-input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #555; /* Adjust color as needed */
+  cursor: pointer;
+}
+  
