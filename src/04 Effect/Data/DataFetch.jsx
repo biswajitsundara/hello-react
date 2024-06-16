@@ -5,10 +5,8 @@ function DataFetch() {
   const [bio, setBio] = useState(null);
 
   useEffect(() => {
-    let ignore = false;
-    setBio(null);
-
     async function fetchBio() {
+      setBio(null);
       const response = await fetch(
         `https://dummyjson.com/users/search?q=${person}`
       );
@@ -18,6 +16,7 @@ function DataFetch() {
       }
     }
 
+    let ignore = false;
     fetchBio();
 
     return () => {
