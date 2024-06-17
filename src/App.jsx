@@ -1,10 +1,10 @@
-import DataFetch from "./04 Effect/Data/DataFetch";
+import BasicQuery from "./Library/React Query/BasicQuery";
 
 
 function App() {
   return (
     <>
-      <DataFetch />
+      <BasicQuery />
     </>
   );
 }
