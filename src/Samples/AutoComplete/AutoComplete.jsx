@@ -25,16 +25,20 @@ function AutoComplete({
     setShowSuggestions(true);
   };
 
-  const handleSuggestionClick = (suggestion) =>{
+  const handleSuggestionClick = (suggestion) => {
     setInputValue(dataKey ? suggestion[dataKey] : dataKey);
     onSelect(suggestion);
     setSuggestions([]);
     setShowSuggestions(false);
-  }
+  };
 
   const showDropDownValues = () => {
     setShowSuggestions(true);
     getSuggestions();
+  };
+
+  const handleOnBlur = () =>{
+    setShowSuggestions(false);
   }
 
   const getSuggestions = async (query) => {
@@ -69,13 +73,17 @@ function AutoComplete({
   return (
     <div className="container">
       <div className="autocomplete-input-wrapper">
-      <input
-        type="text"
-        value={inputValue}
-        placeholder={placeholder}
-        onChange={handleInputChange}
-      />
-      <div className="dropdown-icon" onClick={showDropDownValues}>&#9660;</div>
+        <input
+          type="text"
+          value={inputValue}
+          placeholder={placeholder}
+          onChange={handleInputChange}
+          onBlur={handleOnBlur}
+        />
+
+          <div className="dropdown-icon" onClick={showDropDownValues}>
+            &#9660;
+          </div>
       </div>
 
       {showSuggestions && (suggestions.length > 0 || loading || error) && (
