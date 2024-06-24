@@ -19,18 +19,14 @@ function SearchApp() {
   };
 
   const handleRemoveUser = (user) => {
-    const updatedUsers = selectedUsers.filter((selectedUser) => {
-      selectedUser.id !== user.id;
-    });
-
-    // console.log(updatedUsers);
+    const updatedUsers = selectedUsers.filter((selectedUser) => selectedUser.id !== user.id);
     setSelectUsers(updatedUsers);
-
-
+  
     const updatedEmails = new Set(selectedUserSet);
     updatedEmails.delete(user.email);
     setselectedUserSet(updatedEmails);
   };
+  
 
   const handleKeydown = (e) => {
     if (e.key === "Backspace" && e.target.value === "" && selectedUsers.length > 0) {
