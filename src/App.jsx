@@ -1,10 +1,9 @@
-import SearchApp from "./Samples/SearchInput/SearchApp";
-
+import WindowApp from "./04 Effect/windowListener/WindowApp";
 
 function App() {
   return (
     <>
-      <SearchApp />
+      <WindowApp />
     </>
   );
 }
