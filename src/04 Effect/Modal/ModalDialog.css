@@ -1,0 +1,28 @@
+.modal {
+    position: fixed;
+    top: 0%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background: #3d3939;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+  }
+  
+  .modal:focus {
+    outline: none;
+  }
+  
+  .modal > * {
+    margin-bottom: 10px;
+  }
+  
+  .modal > :last-child {
+    margin-bottom: 0;
+  }
+  
